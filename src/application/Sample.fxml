@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0"
+	prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.SampleController">
+	<children>
+		<TabPane layoutX="14.0" layoutY="14.0" prefHeight="600.0"
+			prefWidth="700.0" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab text="Filmy">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<TableView fx:id="filmyTableView" layoutY="6.0"
+									prefHeight="571.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0"
+									AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+									AnchorPane.topAnchor="0.0">
+									<columns>
+										<TableColumn fx:id="idColumn" prefWidth="75.0"
+											text="ID" />
+										<TableColumn fx:id="nazwaColumn" prefWidth="75.0"
+											text="NAZWA" />
+										<TableColumn fx:id="opisColumn" prefWidth="75.0"
+											text="OPIS" />
+										<TableColumn fx:id="czasTrwaniaColumn" prefWidth="75.0"
+											text="CZAS TRWANIA" />
+										<TableColumn fx:id="limitWiekowyColumn" prefWidth="75.0"
+											text="LIMIT WIEKOWY" />
+									</columns>
+									<columnResizePolicy>
+										<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+									</columnResizePolicy>
+								</TableView>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="Sale">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<TableView fx:id="screeningRoomsTableView" layoutX="215.0"
+									layoutY="210.0" prefHeight="571.0" prefWidth="700.0"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+									<columns>
+										<TableColumn fx:id="screeningRoomNumbercolumn"
+											prefWidth="75.0" text="NUMER" />
+										<TableColumn fx:id="liczbaMiejscScreeningRoomColumn"
+											prefWidth="75.0" text="LICZBA MIEJSCE" />
+										<TableColumn fx:id="typSaliScreeningRoomColumn"
+											prefWidth="75.0" text="TYP SALI" />
+									</columns>
+									<columnResizePolicy>
+										<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+									</columnResizePolicy>
+								</TableView>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+				<Tab text="Seansy">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+							prefWidth="200.0">
+							<children>
+								<TableView fx:id="seansyTableView" layoutX="14.0"
+									layoutY="14.0" prefHeight="571.0" prefWidth="700.0"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+									<columns>
+										<TableColumn fx:id="seansIDColumn" prefWidth="75.0"
+											text="ID" />
+										<TableColumn fx:id="seansFilmIDColumn" prefWidth="75.0"
+											text="ID FILMU" />
+										<TableColumn fx:id="seansNumberSaliColumn"
+											prefWidth="75.0" text="NUMER SALI" />
+										<TableColumn fx:id="seansDataSeansuColumn"
+											prefWidth="75.0" text="DATA SEANSU" />
+									</columns>
+									<columnResizePolicy>
+										<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+									</columnResizePolicy>
+								</TableView>
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+		<VBox alignment="CENTER" layoutX="720.0" layoutY="14.0"
+			prefHeight="600.0" prefWidth="226.0" spacing="15.0">
+			<children>
+				<Button fx:id="dodajFilmStage" maxWidth="-Infinity"
+					mnemonicParsing="false" onAction="#dodajFilmStage" prefWidth="200.0"
+					text="Dodaj film">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Button>
+				<Button fx:id="wczytajFilmyButton" mnemonicParsing="false"
+					onAction="#wczytajFilmy" prefWidth="200.0" text="Wczytaj filmy">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Button>
+				<Region prefHeight="20.0" prefWidth="200.0" />
+				<Button fx:id="dodajSaleStage" mnemonicParsing="false"
+					onAction="#dodajSaleStage" prefWidth="200.0" text="Dodaj salę">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Button>
+				<Button fx:id="wczytajSaleButton" mnemonicParsing="false"
+					onAction="#wczytajSale" prefWidth="200.0" text="Wczytaj sale">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Button>
+				<Region layoutX="10.0" layoutY="300.0" prefHeight="20.0"
+					prefWidth="200.0" />
+				<Button fx:id="dodajSeansStage" layoutX="23.0" layoutY="340.0"
+					mnemonicParsing="false" onAction="#dodajSeansStage" prefWidth="200.0"
+					text="Dodaj seans">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Button>
+				<Button fx:id="wczytajSeanseButton" layoutX="23.0" layoutY="375.0"
+					mnemonicParsing="false" onAction="#wczytajSeansy" prefWidth="200.0"
+					text="Wczytaj seansy">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Button>
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</VBox>
+	</children>
+</AnchorPane>

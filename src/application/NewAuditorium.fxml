@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="480.0" prefWidth="320.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.NewAuditoriumController">
+	<children>
+		<VBox alignment="CENTER" layoutX="79.0" layoutY="84.0"
+			prefHeight="480.0" prefWidth="320.0" spacing="15.0"
+			AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<Label text="Liczba miejsc">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Label>
+				<TextField fx:id="liczbaMiejsc" />
+				<Label text="Typ sali">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Label>
+				<TextField fx:id="typSali" />
+				<Button fx:id="dodajButton" mnemonicParsing="false" onAction="#dodaj"
+					prefWidth="200.0" text="Dodaj salę">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Button>
+			</children>
+			<padding>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</padding>
+		</VBox>
+	</children>
+</AnchorPane>
